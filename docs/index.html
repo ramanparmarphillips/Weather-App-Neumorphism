@@ -65,7 +65,7 @@
                         <p class="timetemp" id="6pm"></p></span>
                     </div>
                     <div>
-                        <p class="time">9am</p>
+                        <p class="time">9pm</p>
                         <p class="timetemp" id="9pm"></p></span>
                     </div>
                     <div>
@@ -350,6 +350,7 @@
         });
 
         async function reSearch(name, country, population) {
+            DYM.style.visibility = 'hidden'
             firstChoice.innerText = ''
             dymOne.innerText = ''
             dymTwo.innerText = ''
