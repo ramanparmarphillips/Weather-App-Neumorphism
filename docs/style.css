@@ -1,3 +1,5 @@
+@import "./mobile.css";
+
 * {
     padding: 0;
     margin: 0;
@@ -60,7 +62,7 @@ body {
     box-shadow: 14px 14px 28px #dfdfdf,
         -14px -14px 28px #ffffff;
 
-
+    cursor: pointer;
     border: none;
     padding: .15rem 2rem;
     min-height: 40px;
@@ -89,11 +91,11 @@ body {
 }
 
 .didYouMean {
-    position: absolute;
+    /* position: absolute; */
     top: 17%;
     display: flex;
     justify-content: space-around;
-    width: 30vw;
+    width: 100%;
 }
 
 .choice {
@@ -122,7 +124,7 @@ body {
 .info {
     /* position: absolute; */
     top: 35%;
-    width: 30vw;
+    width: 100%;
     /* width: fit-content; */
 }
 
@@ -143,7 +145,7 @@ p {
 .weatherIcon {
     width: 100px;
     height: 100px;
-    margin: 8% auto 0 auto;
+    margin: 1em auto;
 }
 
 .cityName {
@@ -196,4 +198,18 @@ p {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.212);
     background-color: #ffffff;
+}
+
+@media screen and (max-width:500px) {
+    #app {
+        width: 90vw;
+    }
+    .didYouMean {
+        justify-content: center;
+    }
+
+    .choice {
+        margin: 0 0.2em;
+    }
+
 }
