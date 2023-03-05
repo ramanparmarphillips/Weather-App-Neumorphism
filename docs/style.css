@@ -22,11 +22,10 @@ body {
     color: #353535;
     background: #f2f2f2;
 }
-
 #app {
     min-width: 20vw;
     max-width: max-content;
-    height: 90vh;
+    /* height: 90vh; */
     border-radius: 50px;
     background: #f2f2f2;
     box-shadow: 20px 20px 60px #cecece,
@@ -35,15 +34,12 @@ body {
     flex-direction: column;
     overflow: hidden;
 }
-
 .search {
     margin: 10px auto;
 }
-
 form {
     margin-top: 1em;
 }
-
 #input {
     /* max-width: 190px; */
     background-color: #fcfbfb;
@@ -57,15 +53,12 @@ form {
     box-shadow: 0px 10px 20px -18px;
 
 }
-
 #input:focus {
     border-bottom: 1px solid #5b5fc7;
 }
-
 #input:hover {
     outline: 1px solid lightgrey;
 }
-
 #addButton {
     border-radius: 46px;
     background: #f2f2f2;
@@ -81,16 +74,13 @@ form {
     font-weight: 600;
     transition: all 200ms ease;
 }
-
 #addButton:hover {
     color: rgb(172, 172, 172);
 }
-
 #addButton:active {
     background: linear-gradient(145deg, #dddddd, #ffffff);
     box-shadow: 20px 20px 40px #d0d0d0, -20px -20px 40px #ffffff;
 }
-
 .DYM {
     /* height: 30px; */
     /* position: absolute; */
@@ -100,15 +90,14 @@ form {
     z-index: 100;
     margin: 1em auto;
 }
-
 .didYouMean {
     /* position: absolute; */
     /* top: 17%; */
     display: flex;
     justify-content: space-around;
     width: 100%;
+    height: 2rem;
 }
-
 .choice {
     width: fit-content;
     height: max-content;
@@ -122,43 +111,31 @@ form {
     cursor: pointer;
     
 }
-
 .choice:hover {
     color: #353535;
 }
-
 .choice:active {
     background: linear-gradient(145deg, #dddddd, #ffffff);
     box-shadow: 20px 20px 40px #d0d0d0, -20px -20px 40px #ffffff;
 }
-
 .info {
     /* position: absolute; */
     top: 35%;
     width: 100%;
     /* width: fit-content; */
 }
-
-
-
 .didYouMean {
     display: flex;
 }
-
 p {
     margin:  10px;
     
 }
-
-
-
-
 .weatherIcon {
     width: 100px;
     height: 100px;
     margin: 1em auto;
 }
-
 .cityName {
     text-align: center;
     /* font-size: 250%; */
@@ -166,17 +143,14 @@ p {
     padding: 0;
     margin: 0;
 }
-
 /* .top {
     margin-top: 40px;
 } */
-
 .details {
     /* font-size: 4vw; */
-    font-size: 190%;
+    /* font-size: 190%; */
+    line-height: 7vh;
 }
-
-
 
 #hourly {
     display: flex;
@@ -185,7 +159,7 @@ p {
     justify-content: start;
     height: 11vh;
     padding: 0 1rem;
-    width:95%;
+    width:100%;
     margin: 0 auto;
 }
 
@@ -199,47 +173,34 @@ p {
     background: #f5f5f5;
     box-shadow: 5px 5px 5px #eeeeee, -5px -5px 5px #fcfcfc;
 }
-
 #hourly::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.075);
     border-radius: 10px;
     background-color: #ffffff;
 }
-
 #hourly::-webkit-scrollbar {
     height: 5px;
     background-color: #ffffff;
 }
-
 #hourly::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.212);
     background-color: #ffffff;
 }
 
-
-
-
-
-
 @media only screen and (max-width:980px) {
     #app {
         width: 90vw;
     }
-
     /* .cityName {
         font-size: 600%;
     } */
-
     .didYouMean {
         justify-content: center;
         font-size: 3vw;
 
     }
-
     .choice {
         margin: 0 0.1em;
     }
-
-
 }
