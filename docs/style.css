@@ -6,7 +6,12 @@
     box-sizing: border-box;
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body {
+    height: -webkit-fill-available;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +24,8 @@ body {
 }
 
 #app {
-    width: 30vw;
+    min-width: 20vw;
+    max-width: max-content;
     height: 90vh;
     border-radius: 50px;
     background: #f2f2f2;
@@ -31,12 +37,15 @@ body {
 }
 
 .search {
-    margin: 40px auto;
+    margin: 10px auto;
 }
 
+form {
+    margin-top: 1em;
+}
 
 #input {
-    max-width: 190px;
+    /* max-width: 190px; */
     background-color: #fcfbfb;
     color: #242424;
     padding: .15rem .5rem;
@@ -46,6 +55,7 @@ body {
     border: none;
     line-height: 1.15;
     box-shadow: 0px 10px 20px -18px;
+
 }
 
 #input:focus {
@@ -83,16 +93,17 @@ body {
 
 .DYM {
     height: 30px;
-    position: absolute;
-    top: 15%;
+    /* position: absolute; */
+    /* top: 15%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%); */
     z-index: 100;
+    margin:2em auto;
 }
 
 .didYouMean {
     /* position: absolute; */
-    top: 17%;
+    /* top: 17%; */
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -109,7 +120,7 @@ body {
     text-align: center;
     transition: all 2000ms ease;
     cursor: pointer;
-
+    
 }
 
 .choice:hover {
@@ -135,8 +146,8 @@ body {
 }
 
 p {
-    margin: 10px;
-
+    margin:  10px;
+    
 }
 
 
@@ -149,9 +160,11 @@ p {
 }
 
 .cityName {
-    height: 70px;
     text-align: center;
-    font-size: 50px;
+    font-size: 250%;
+    height: min-content;
+    padding: 0;
+    margin: 0;
 }
 
 .top {
@@ -159,7 +172,8 @@ p {
 }
 
 .details {
-    font-size: 30px;
+    /* font-size: 4vw; */
+    font-size: 190%;
 }
 
 
@@ -170,6 +184,9 @@ p {
     text-align: center;
     justify-content: start;
     height: 11vh;
+    padding: 0 1rem;
+    width:95%;
+    margin: 0 auto;
 }
 
 #hourly div {
@@ -200,16 +217,31 @@ p {
     background-color: #ffffff;
 }
 
-@media screen and (max-width:1000px) {
+
+
+
+
+
+@media only screen and (max-width:980px) {
     #app {
         width: 90vw;
     }
+
+    .cityName {
+        font-size: 600%;
+    }
+
     .didYouMean {
         justify-content: center;
     }
 
     .choice {
-        margin: 0 0.2em;
+        margin: 0 1em;
     }
+
+    /* .details {
+    font-size: 6vw;
+    } */
+
 
 }
