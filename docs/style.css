@@ -16,13 +16,14 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     color: #353535;
     background: #f2f2f2;
 }
 #app {
+    /* height: -webkit-fill-available; */
     min-width: 20vw;
     max-width: max-content;
     /* height: 90vh; */
@@ -139,7 +140,7 @@ p {
 .cityName {
     text-align: center;
     /* font-size: 250%; */
-    height: min-content;
+    height: 4vh;
     padding: 0;
     margin: 0;
 }
@@ -191,6 +192,7 @@ p {
 @media only screen and (max-width:980px) {
     #app {
         width: 90vw;
+    
     }
     /* .cityName {
         font-size: 600%;
@@ -204,3 +206,17 @@ p {
         margin: 0 0.1em;
     }
 }
+
+
+
+
+
+/* .fade-in {
+    opacity: 0;
+    /* opacity: 0; */
+    transition: opacity 5s ease-in-out;
+}
+
+.fade-in-effect {
+    opacity: 1;
+} */

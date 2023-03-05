@@ -18,7 +18,7 @@
         <div class="search">
             <form action="#">
                 <input id="input" type="text">
-                <button id="addButton" type="button" >Go</button>
+                <button id="addButton" type="button" onclick="populatePageWithData()">Go</button>
             </form>
         </div>
         <h6 class="DYM" id="biteMe" data-juice="hello">Did you mean:</h6>
@@ -30,7 +30,7 @@
         </div>
         <img class="weatherIcon" src="" alt="">
         <div class="info">
-            <h1 class="cityName" id="1"></h1>
+            <h1 class="fade-in cityName" id="1"></h1>
             <h1 class="top details">Country: <span class="country"></span></h1>
             <h1 class="details">Temp: <span class="temp"></span>°C</h1>
             <h1 class="details">Current Weather:<br><span class="currentweather"></span></h1>
@@ -125,25 +125,47 @@
             method: 'GET',
             headers: { 'X-Api-Key': 'AIHeZQUtYwS4DUw3DQLJug==aU56gxfYhsQryj3h' },
         }
+        
+        // function populatePageWithData() {
+    //     // Add code here to populate the page with data from the API
 
-    async function onloadFetchData() {
-            firstChoice.innerText = ''
-            dymOne.innerText = ''
-            dymTwo.innerText = ''
-            dymThree.innerText = ''
-            dymFour.innerText = ''
-            input.value = ''
-            let url = `https://api.api-ninjas.com/v1/city?name=london&limit=5`
-            let response = await fetch(url, options)
-            let info = await response.json()
-            console.log(info);
-            firstChoice.innerText = info[0].name
-            countOP.textContent = info[0].country
-            weatherIcon.style.visibility = 'visible'
-            userLat = info[0].latitude
-            userLon = info[0].longitude
-            fetchWeather(userLat, userLon)
-        }
+    //     // Add the following code to fade-in the page elements smoothly
+    //     // elements.forEach(element => {
+    //     //     element.classList.add('fade-in-effect');
+    //     // });
+    //     elements.style.opacity = 1
+    // }
+
+    //window.addEventListener('load', populatePageWithData);
+
+    // button.addEventListener('click', () => {
+    //     // Add code here to fetch data from the API and populate the page
+
+    //     // Call the function to add the fade-in effect after populating the page
+    //     populatePageWithData();
+    // });
+
+    
+    let elements = document.querySelector('.fade-in');
+
+async function onloadFetchData() {
+    firstChoice.innerText = ''
+    dymOne.innerText = ''
+    dymTwo.innerText = ''
+    dymThree.innerText = ''
+    dymFour.innerText = ''
+    input.value = ''
+    let url = `https://api.api-ninjas.com/v1/city?name=london&limit=5`
+    let response = await fetch(url, options)
+    let info = await response.json()
+    console.log(info);
+    firstChoice.innerText = info[0].name
+    countOP.textContent = info[0].country
+    weatherIcon.style.visibility = 'visible'
+    userLat = info[0].latitude
+    userLon = info[0].longitude
+    fetchWeather(userLat, userLon)
+}
         onloadFetchData()
         
         button.addEventListener('click', fetchData)
@@ -151,6 +173,7 @@
         let name 
         
         async function fetchData() {
+
             name = input.value
             firstChoice.innerText = ''
             dymOne.innerText      = ''
@@ -182,6 +205,8 @@
             userLat = info[0].latitude
             userLon = info[0].longitude
             fetchWeather(userLat, userLon)
+            // populatePageWithData()
+
         }
 
 
