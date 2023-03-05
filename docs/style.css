@@ -237,11 +237,20 @@ p {
 
     .choice {
         margin: 0 1em;
+        font-size: 200%;
     }
 
-    /* .details {
-    font-size: 6vw;
-    } */
+    .details {
+        font-size:400%;
+    }
+
+    #hourly {
+        margin-top: 5vh;
+    }
+
+    #hourly p {
+        font-size: 300%;
+    }
 
 
 }
