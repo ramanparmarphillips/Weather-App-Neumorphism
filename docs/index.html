@@ -4,6 +4,8 @@
 <head>
     <title>Weather App</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,12 +31,12 @@
         <img class="weatherIcon" src="" alt="">
         <div class="info">
             <h1 class="cityName" id="1"></h1>
-            <p class="top details">Country: <span class="country"></span></p>
-            <p class="details">Temp: <span class="temp"></span>°C</p>
-            <p class="details">Current Weather: <span class="currentweather"></span></p>
-            <p class="details">Elevation: <span class="elevation"></span></p>
-            <p class="details">Sunrise: <span class="sunrise">am</span></p>
-            <p class="details">Sunset: <span class="sunset">pm</span></p>
+            <h1 class="top details">Country: <span class="country"></span></h1>
+            <h1 class="details">Temp: <span class="temp"></span>°C</h1>
+            <h1 class="details">Current Weather: <span class="currentweather"></span></h1>
+            <h1 class="details">Elevation: <span class="elevation"></span></h1>
+            <h1 class="details">Sunrise: <span class="sunrise">am</span></h1>
+            <h1 class="details">Sunset: <span class="sunset">pm</span></h1>
             <div id="hourly" class="hourly">
                 <div class="left">
                     <p class="time">0:00</p>
@@ -104,7 +106,7 @@
         let userLat
         let userLon
 
-        // weatherIcon.src = './weatherPics/clear.svg'
+         weatherIcon.src = './weatherPics/clear.svg'
         
         let choice = document.querySelector('.didYouMean')
         choice.style.visibility = 'hidden'

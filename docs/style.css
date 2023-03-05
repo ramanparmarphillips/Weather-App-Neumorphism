@@ -1,4 +1,4 @@
-@import "./mobile.css";
+
 
 * {
     padding: 0;
@@ -92,13 +92,13 @@ form {
 }
 
 .DYM {
-    height: 30px;
+    /* height: 30px; */
     /* position: absolute; */
     /* top: 15%;
     left: 50%;
     transform: translate(-50%); */
     z-index: 100;
-    margin:2em auto;
+    margin: 1em auto;
 }
 
 .didYouMean {
@@ -161,15 +161,15 @@ p {
 
 .cityName {
     text-align: center;
-    font-size: 250%;
+    /* font-size: 250%; */
     height: min-content;
     padding: 0;
     margin: 0;
 }
 
-.top {
+/* .top {
     margin-top: 40px;
-}
+} */
 
 .details {
     /* font-size: 4vw; */
@@ -222,35 +222,24 @@ p {
 
 
 
-/* @media only screen and (max-width:980px) {
+@media only screen and (max-width:980px) {
     #app {
         width: 90vw;
     }
 
-    .cityName {
+    /* .cityName {
         font-size: 600%;
-    }
+    } */
 
     .didYouMean {
         justify-content: center;
+        font-size: 3vw;
+
     }
 
     .choice {
-        margin: 0 1em;
-        font-size: 200%;
-    }
-
-    .details {
-        font-size:400%;
-    }
-
-    #hourly {
-        margin-top: 5vh;
-    }
-
-    #hourly p {
-        font-size: 300%;
+        margin: 0 0.1em;
     }
 
 
-} */
+}
