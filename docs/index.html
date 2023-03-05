@@ -18,7 +18,7 @@
         <div class="search">
             <form action="#">
                 <input id="input" type="text">
-                <button id="addButton" type="button" onclick="populatePageWithData()">Go</button>
+                <button id="addButton" type="button" >Go</button>
             </form>
         </div>
         <h6 class="DYM" id="biteMe" data-juice="hello">Did you mean:</h6>
@@ -174,7 +174,7 @@ async function onloadFetchData() {
         
         async function fetchData() {
 
-            name = input.value
+            name = input.value.trim()
             firstChoice.innerText = ''
             dymOne.innerText      = ''
             dymTwo.innerText      = ''
